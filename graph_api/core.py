@@ -136,8 +136,6 @@ class CommonAbstractHandler:
             query_dict['metric'] = ','.join(self.metric)
         if self.period is not None:
             query_dict['period'] = self.period
-        if self.extra_params is not None:
-            query_dict = {**self.extra_params, **query_dict}
         return query_dict
 
     def build_path_list(self):
